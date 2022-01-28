@@ -22,5 +22,16 @@ class Articles(db.Model):
     def __init__(self, title, body):
         self.title = title
         self.body = body
+
+
+# Serialize the data
+ma = Marshmallow(app)
+
+class ArticlesSchema(ma.Schema):
+    class Meta:
+        fields = ('id', 'title', 'body', 'date')
+
+article_schema = ArticlesSchema()
+articles_schema = ArticlesSchema(many=True)
 if __name__ == '__main__':
     app.run(debug=True)
