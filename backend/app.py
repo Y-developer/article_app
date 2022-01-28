@@ -11,5 +11,16 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:''@localhost/electronjs_flask_ex'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
+
+# create database tables
+class Articles(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(100))
+    body = db.Column(db.Text())
+    date = db.Column(db.DateTime, default = datetime.datetime.now)
+
+    def __init__(self, title, body):
+        self.title = title
+        self.body = body
 if __name__ == '__main__':
     app.run(debug=True)
