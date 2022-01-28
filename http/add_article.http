@@ -1,0 +1,7 @@
+POST http://127.0.0.1:5000/add
+content-type: application/json
+
+{
+    "title": "Sample Title",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus sollicitudin ligula, ut consectetur mi molestie eget. Sed lacus dui, finibus vitae urna vel, rhoncus convallis ipsum. Phasellus rhoncus tristique mattis. Sed eu elit enim. Cras dapibus accumsan sodales. Integer a urna quis mauris gravida consectetur eu ut massa. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras volutpat libero tellus. Aliquam gravida eu tellus quis feugiat. Phasellus tortor quam, euismod id tortor pellentesque, vehicula accumsan lorem. Curabitur pretium arcu nec nulla malesuada rhoncus."
+}

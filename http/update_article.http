@@ -1,0 +1,7 @@
+PUT  http://127.0.0.1:5000/update/1/
+content-type: application/json
+
+{
+    "title": "This is new title",
+    "body": "This is new body of the artical"
+}
