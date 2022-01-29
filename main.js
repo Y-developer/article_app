@@ -1,14 +1,34 @@
-const {app, BrowserWindow} = require("electron");
+const { app, BrowserWindow, Menu } = require("electron");
 
-function createWindow(){
+function createWindow() {
+
+    // create main window object
     const mainWindow = new BrowserWindow({
-        width : 800,
-        height : 600
+        width: 800,
+        height: 600
     });
+
+    // load files
     mainWindow.loadFile('src/ui/index.html');
+
+    // enable dev tools
+    mainWindow.webContents.openDevTools();
+
+    // create custom menu
+    const menu = Menu.buildFromTemplate([
+        {
+            label: 'File',
+            submenu: [
+                { label: 'Get Artical' },
+                { label: 'Exit', click() { app.quit() } }
+            ]
+        },
+        { label: 'About' }
+    ]);
+    Menu.setApplicationMenu(menu)
 }
 
 // run the application
-app.whenReady().then(()=>{
+app.whenReady().then(() => {
     createWindow();
 });
