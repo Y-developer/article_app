@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,26 @@
     <title>Python and ElectronJS</title>
     <link rel="stylesheet" href="./bootstrap_solar.min.css">
 </head>
+
 <body>
-    <h1>Welcome to Electron JS</h1>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6">
+                <form id="myform">
+                    <div class="form-group">
+                        <input type="text" id="title" class="form-control mt-2" placeholder="Please Enter Title" autofocus>
+                        <textarea id="discription" rows="5" class="form-control mt-1" placeholder="Please Enter Discription"></textarea>
+                        <button class="btn btn-success mt-1">Save</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-6">
+                <h1>this is the log</h1>
+            </div>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
 </body>
+
 </html>
