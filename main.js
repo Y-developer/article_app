@@ -10,10 +10,10 @@ function createWindow() {
     });
 
     // load files
-    mainWindow.loadFile('src/ui/index.html');
+    mainWindow.loadFile('src/index.html');
 
     // enable dev tools
-    mainWindow.webContents.openDevTools();
+    // mainWindow.webContents.openDevTools();
 
     // create custom menu
     const menu = Menu.buildFromTemplate([
